@@ -1,0 +1,16 @@
+---
+# Doc: https://linux.die.net/man/5/ssmtp.conf
+ssmtp_root: postmaster
+ssmtp_mailhub: mail
+ssmtp_hostname: "{{ inventory_hostname }}"
+# ssmtp_rewrite_domain: ''
+ssmtp_from_line_override: 'no'
+# ssmtp_use_tls: ''
+# ssmtp_use_starttls: ''
+# ssmpt_tls_cert:
+# ssmpt_tls_key:
+# ssmtp_tls_ca_file:
+# ssmpt_tls_ca_dir:
+# ssmtp_auth_user:
+# ssmtp_auth_pass:
+# ssmtp_auth_method:

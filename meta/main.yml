@@ -1,0 +1,17 @@
+galaxy_info:
+  role_name: ssmtp
+  author: Nicholas Burr
+  description: Install and configure ssmtp
+
+  license: MIT
+
+  min_ansible_version: 2.9
+
+  platforms:
+  - name: Ubutnu
+    versions:
+    - Focal
+
+  galaxy_tags: []
+
+dependencies: []

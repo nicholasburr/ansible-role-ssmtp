@@ -1,0 +1,64 @@
+# {{ ansible_managed }}
+#
+root={{ ssmtp_root_email }}
+mailhub={{ ssmtp_mailhub }}
+hostname={{ ssmtp_hostname }}
+{% if ssmtp_rewrite_domain is defined %}
+rewriteDomain={{ ssmtp_rewrite_domain }}
+{% else %}
+#rewriteDomain=
+{% endif %}
+{% if ssmtp_from_line_override is defined %}
+FromLineOverride={{ ssmtp_from_line_override }}
+{% else %}
+#FromLineOverride=
+{% endif %}
+
+# TLS options
+{% if ssmtp_use_tls is defined %}
+UseTLS={{ ssmtp_use_tls }}
+{% else %}
+#UseTLS=
+{% endif %}
+{% if ssmtp_use_starttls is defined %}
+UseStartTLS={{ ssmtp_use_starttls }}
+{% else %}
+#UseSTARTTLS=
+{% endif %}
+{% if ssmpt_tls_cert is defined %}
+TLSCert={{ ssmpt_tls_cert }}
+{% else %}
+#TLSCert=
+{% endif %}
+{% if ssmpt_tls_key is defined %}
+TLSKey={{ ssmpt_tls_key }}
+{% else %}
+#TLSKey=
+{% endif %}
+{% if ssmtp_tls_ca_file is defined %}
+TLS_CA_FILE={{ ssmtp_tls_ca_file }}
+{% else %}
+#TLS_CA_FILE=
+{% endif %}
+{% if ssmpt_tls_ca_dir is defined %}
+TLS_CA_Dir={{ ssmpt_tls_ca_dir }}
+{% else %}
+#TLS_CA_Dir=
+{% endif %}
+
+# Username/Password
+{% if ssmtp_auth_user is defined %}
+AuthUser={{ ssmtp_auth_user }}
+{% else %}
+#AuthUser=
+{% endif %}
+{% if ssmtp_auth_pass is defined %}
+AuthPass={{ ssmtp_auth_pass }}
+{% else %}
+#AuthPass=
+{% endif %}
+{% if ssmtp_auth_method is defined %}
+AuthMethod={{ ssmtp_auth_method }}
+{% else %}
+#AuthMethod=
+{% endif %}
